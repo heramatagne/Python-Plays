@@ -1,10 +1,13 @@
-user_number = int(input("Please enter a number between 1 and 100: "))
+def check_even_odd(number):
+    if (number % 2) == 0:
+        return "even"
+    else:
+        return "odd"
 
-# Check if the number is even or odd
-if (user_number % 2) == 0:
-    result = "even"
-else:
-    result = "odd"
+def main():
+    user_number = int(input("Please enter a number between 1 and 100: "))
+    result = check_even_odd(user_number)
+    print(f"\nYour number {user_number} is {result}.\n")
 
-# Display the result
-print(f"\n Your number {user_number} is {result}.\n")
+if __name__ == "__main__":
+    main()
